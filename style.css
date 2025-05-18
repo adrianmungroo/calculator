@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+#calculator {
+  background-color: #333;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  overflow: hidden;
+}
+
+#display {
+  width: 100%;
+  padding: 20px;
+  font-size: 2.5rem;
+  text-align: right;
+  border: none;
+  background-color: #222;
+  color: white;
+  box-sizing: border-box;
+  height: 80px;
+  outline: none;
+}
+
+#cursor-controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+  background-color: #2a2a2a;
+}
+
+.control {
+  width: 80px;
+  height: 40px;
+  font-size: 1.5rem;
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.15s, transform 0.1s;
+}
+
+.control:hover {
+  background-color: #666;
+}
+
+.control:active {
+  background-color: #777;
+  transform: scale(0.95);
+}
+
+#buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 20px;
+}
+
+button {
+  width: 100%;
+  height: 65px;
+  border-radius: 10px;
+  border: none;
+  background-color: #444;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s, transform 0.1s;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+button:active {
+  transform: scale(0.95);
+  background-color: #666;
+}
+
+.operator {
+  background-color: #ff9500;
+  color: white;
+}
+
+.operator:hover {
+  background-color: #ffaa33;
+}
+
+.operator:active {
+  background-color: #ffbb66;
+}
+
+.equals {
+  background-color: #007bff;
+  color: white;
+}
+
+.equals:hover {
+  background-color: #0069d9;
+}
+
+.equals:active {
+  background-color: #0062cc;
+}
+
+/* Add responsive design */
+@media (max-width: 400px) {
+  #calculator {
+    width: 95%;
+  }
+
+  button {
+    height: 60px;
+    font-size: 1.5rem;
+  }
+}
